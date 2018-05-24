@@ -1,1 +1,9 @@
 source /etc/profile
+
+	
+curlc  -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+java -version
+spring --version
+sdk version

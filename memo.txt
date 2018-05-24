@@ -7,3 +7,9 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 java -version
 spring --version
 sdk version
+
+https://spring.io/tools/sts/all
+
+~/下載/sts-bundle/sts-3.9.4.RELEASE/STS
+/home/ted/Documents/workspace-sts-3.9.4.RELEASE
+

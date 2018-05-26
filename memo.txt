@@ -58,3 +58,45 @@ sudo service postgresql restart
 sudo vim /var/lib/postgresql/.psql_history
 
 create user ted with password '111111';
+
+
+tomcat
+tar xzf apache-tomcat-8.5.31.tar.gz
+
+sudo mv apache-tomcat-8.5.31/ /opt/apache-tomcat-8.5.31
+sudo ln -s /opt/apache-tomcat-8.5.31/ /opt/tomcat8
+/opt/tomcat8/bin/startup.sh
+/opt/tomcat8/bin/shutdown.sh
+/opt/tomcat8/conf/tomcat-users.xml
+root
+123456
+
+
+solr
+https://archive.apache.org/dist/lucene/solr/5.3.1/
+sudo mv solr-5.3.1/ /opt/solr-5.3.1
+cd /opt/solr-5.3.1/server/solr-webapp/webapp
+zip -r solr.war ./*
+
+cp solr.war /opt/tomcat8/webapps/
+
+sudo mkdir /opt/solr_home
+sudo cp /opt/solr-5.3.1/server/solr/solr.xml /opt/solr_home
+sudo mkdir /opt/solr_home/core1
+sudo cp  -r server/solr/configsets/basic_configs/conf/* /opt/solr_home/core1/
+sudo rm -f /opt/solr_home/core1/_rest_managed.json
+sudo cp /opt/solr-5.3.1/server/lib/ext/*.jar /opt/tomcat8/webapps/solr/WEB-INF/lib/
+
+cd /opt/tomcat8/webapps/solr/WEB-INF/
+mkdir classes
+cd classes/
+cp /opt/solr-5.3.1/server/resources/log4j.properties ./
+
+sudo vim /opt/tomcat8/webapps/solr/WEB-INF/web.xml
+    <env-entry>
+       <env-entry-name>solr/home</env-entry-name>
+       <env-entry-value>/opt/solr_home</env-entry-value>
+       <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+

@@ -38,3 +38,23 @@ sudo pip2.7 install jupyter
 
 jupyter notebook
 https://blog.csdn.net/jenyzhang/article/details/73275232
+
+
+postgre
+https://www.phpini.com/linux/ubuntu-16-04-install-postgresql
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+
+sudo apt-get install phppgadmin
+
+http://localhost/phppgadmin/
+
+
+sudo -u postgres psql
+ALTER USER postgres WITH PASSWORD '1234';
+\q
+sudo service postgresql restart
+
+sudo vim /var/lib/postgresql/.psql_history
+
+create user ted with password '111111';

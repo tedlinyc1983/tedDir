@@ -13,3 +13,28 @@ https://spring.io/tools/sts/all
 ~/下載/sts-bundle/sts-3.9.4.RELEASE/STS
 /home/ted/Documents/workspace-sts-3.9.4.RELEASE
 
+
+
+
+/usr/local/bin/python2.7
+/usr/src/Python-2.7.13
+http://www.ycc.idv.tw/python-play-with-data_1.html
+python2.7 ubuntu 安裝
+sudo apt-get install build-essential checkinstall
+sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+cd /usr/src
+wget https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz
+
+
+python2.7 get-pip.py 
+sudo pip2.7 install ipython
+sudo pip2.7 install numpy
+sudo pip2.7 install pandas
+
+ipython2
+
+
+sudo pip2.7 install jupyter
+
+jupyter notebook
+https://blog.csdn.net/jenyzhang/article/details/73275232

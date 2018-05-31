@@ -100,3 +100,10 @@ sudo vim /opt/tomcat8/webapps/solr/WEB-INF/web.xml
     </env-entry>
 
 
+
+solr example dih
+cd /opt/solr-5.3.1/bin
+bash solr start -e dih
+bash solr stop -e dih
+
+http://localhost:8983/solr/db/dataimport?command=full-import

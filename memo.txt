@@ -107,3 +107,10 @@ bash solr start -e dih
 bash solr stop -e dih
 
 http://localhost:8983/solr/db/dataimport?command=full-import
+
+jieba
+git clone https://github.com/sing1ee/analyzer-solr.git
+
+
+gradle
+export PATH=$PATH:/opt/gradle/gradle-3.4.1/bin

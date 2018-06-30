@@ -114,3 +114,33 @@ git clone https://github.com/sing1ee/analyzer-solr.git
 
 gradle
 export PATH=$PATH:/opt/gradle/gradle-3.4.1/bin
+
+
+http://localhost:8086/user/MyFirstPage
+
+http://localhost:8086/swagger-ui.html
+
+
+redis
+sudo apt show redis-server
+sudo apt-get install redis-server
+
+curl -O http://download.redis.io/releases/redis-4.0.8.tar.gz
+tar xzf redis-4.0.8.tar.gz
+sudo apt intall tcl
+make
+make test
+sudo make install
+redis.conf
+bind 127.0.0.1
+requirepass mypassword
+
+screen
+redis-server ./redis.conf
+
+sudo service redis-server start|stop|restart|status
+redis-cli
+/etc/redis/redis.conf
+
+127.0.0.1:6379
+nc -v 127.0.0.1 6379
